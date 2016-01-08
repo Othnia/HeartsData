@@ -64,7 +64,7 @@ public class Query {
 		println("");
 	}
 	
-	private String get() {
+	private String getOutput() {
 		String line = input.nextLine();
 		if (ps != null)
 			ps.println(line);
@@ -73,7 +73,7 @@ public class Query {
 	
 	private boolean getYesNo(String outstr) {
 		print(outstr);
-		String answer = get();
+		String answer = getOutput();
 		while (true) {
 			if (answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("yes")) {
 				return true;
@@ -142,7 +142,7 @@ public class Query {
 		}
 		
 		print("Enter the file to output to: ");
-		String filename = get();
+		String filename = getOutput();
 		this.filename = filename;
 		
 		File file = new File(filename);
@@ -238,7 +238,7 @@ public class Query {
 		}
 		
 		print("Enter the player to get data for: ");
-		String playername = get();
+		String playername = getOutput();
 		getPlayerCard(playername);
 	}
 	
@@ -250,7 +250,7 @@ public class Query {
 		}
 		
 		print("Enter the player to get data for: ");
-		String playername = get();
+		String playername = getOutput();
 		println("Shoots: " + data.getPlayer(playername, teamMode).getShootCount(teamMode));
 	}
 	
