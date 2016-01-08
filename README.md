@@ -9,9 +9,10 @@ Although the program will accept case-insensitive user input (you can call optio
 
 When the user calls an option, they can either enter the option name itself (eg. 'do the thing') to call that option, or they can enter the option name immediately followed by a question mark (eg. 'do the thing?') to simply have a description of that option printed. Either way, the corresponding method will be called, but the presence of a question mark will cause the single boolean argument to be true rather than false (explained below).
 
-Every user-option method must be public and accept exactly one boolean parameter (denoted 'helpMode' below). If the method is called with 'helpMode' equal to true, then the program merely outputs a String describing the method and returns. If 'helpMode' is equal to false, then the actual method execution will occur (in the below example, <CODE HERE> will execute), allowing user input and data output to occur.
+Every user-option method must be public and accept exactly one boolean parameter (denoted 'helpMode' below). If the method is called with 'helpMode' equal to true, then the program merely outputs a String describing the method and returns. If 'helpMode' is equal to false, then the actual method execution will occur (in the below example, 'CODE HERE' will execute), allowing user input and data output to occur.
 
 The format for a Query.java user-option method is specified below:
+
       /*
        * @author John Doe
        * @date 1/1/1970
