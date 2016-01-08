@@ -87,6 +87,13 @@ public class Query {
 	
 	/* USER OPTIONS
 
+	NOTE: The methods immediately following this
+	example are system functions: user defined
+	data output functions come after the
+	'Data Lookup' comment. All methods must have
+	their author in a comment, and should also
+	include a method description.
+
 	Method Template for option 'do the thing':
 	
 	public void doTheThing(boolean helpMode) {
@@ -99,10 +106,14 @@ public class Query {
 			return;
 		}
 		
-		<METHOD HERE>
+		<CODE HERE>
 	}
 	*/
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void quit(boolean helpMode) {
 		String help = "Exits the program.";
 		if (helpMode) {
@@ -114,6 +125,10 @@ public class Query {
 		closing = true;
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void help(boolean helpMode) {
 		String help = "Help about help: so meta.";
 		if (helpMode) {
@@ -126,6 +141,10 @@ public class Query {
 	
 		/* Settings */
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void enableFileOutput(boolean helpMode) {
 		String help = "Use this to change file output.\n"
 					+ "Program will write console output to this file.";
@@ -164,6 +183,10 @@ public class Query {
 		println("Output file set to '" + filename + "'.");
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void disableFileOutput(boolean helpMode) {
 		String help = "Use this to turn off file output.";
 		if (helpMode) {
@@ -180,6 +203,10 @@ public class Query {
 		}
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void enableTeamMode(boolean helpMode) {
 		String help = "Enable Team Mode.\n"
 					+ "Team Mode will cause data output to\n"
@@ -194,6 +221,10 @@ public class Query {
 		teamMode = true;
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void disableTeamMode(boolean helpMode) {
 		String help = "Enable Team Mode.\n"
 					+ "Team Mode will cause data output to\n"
@@ -210,6 +241,10 @@ public class Query {
 	
 		/* Data Lookup */
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void getShootCounts(boolean helpMode) {
 		String help = "";
 		if (helpMode) {
@@ -220,6 +255,10 @@ public class Query {
 		print("");
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void listPlayerTeams(boolean helpMode) {
 		String help = "";
 		if (helpMode) {
@@ -230,6 +269,10 @@ public class Query {
 		print("");
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void getPlayerCard(boolean helpMode) {
 		String help = "";
 		if (helpMode) {
@@ -242,6 +285,10 @@ public class Query {
 		getPlayerCard(playername);
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void getShootCount(boolean helpMode) {
 		String help = "";
 		if (helpMode) {
@@ -254,6 +301,10 @@ public class Query {
 		println("Shoots: " + data.getPlayer(playername, teamMode).getShootCount(teamMode));
 	}
 	
+	/*
+	 * @author Calob Symonds
+	 * @date 12/31/2015
+	 */
 	public void getPlayerCardAll(boolean helpMode) {
 		String help = "";
 		if (helpMode) {
@@ -277,7 +328,7 @@ public class Query {
 			}
 		}
 	}
-	
+
 	private void getPlayerCard(String playername) {
 		Player player = data.getPlayer(playername, false);
 		
